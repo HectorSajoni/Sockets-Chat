@@ -4,8 +4,10 @@ var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
+let puerto = process.env.PORT || 8080
+
 app.use(express.static('public'));
-server.listen(8080, () => console.log('Servidor iniciado en 8080'));
+server.listen(puerto, () => console.log('Servidor iniciado en '+ puerto));
 
 app.get('/', function (req, res) 
 {
