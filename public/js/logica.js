@@ -2,7 +2,7 @@
 var socket = io();
 let mensaje = document.getElementById('mensaje');
 let usuario = document.getElementById('usuario');
-let contenido = document.getElementById('contenido');
+let mensajes = document.getElementById('mensajes');
 let notificaciones = document.getElementById('notificaciones');
 let botonEnviar = document.getElementById('enviar');
 
@@ -33,8 +33,11 @@ botonEnviar.addEventListener('click', function ()
 });
 
 socket.on('chat:mensaje', function (data) {
-  contenido.innerHTML +=
-    '<p><strong>' + data.usuario + '</strong>: ' + data.mensaje + '</p>';
+  mensajes.innerHTML += 
+    `<div class="contenido">
+      <strong>`+data.usuario+`</strong>
+      <div class="mensajes">`+data.mensaje+`</div>
+    </div>`;
   notificaciones.innerHTML = '';
 });
 

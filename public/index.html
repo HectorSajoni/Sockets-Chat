@@ -11,59 +11,30 @@
   </head>
 
   <body>
-      <center><h1>Chat</h1></center>
+    <center><h1>Chat</h1></center>
+
+    <div class="main">
+      <input
+        type="text"
+        id="usuario"
+        placeholder="Usuario"
+        class="text-success"
+        required/>
+
       <div class="card">
+        <div id="mensajes"></div>
+      </div>
 
-        <div id="chat">
-          <div id="notificaciones"></div>
-        </div>
-
+      <div class="fondo">
         <input
           type="text"
-          id="usuario"
-          placeholder="Usuario"
+          id="mensaje"
+          placeholder="Mensaje"
           class="text-success"
           required/>
-
-        <div id="contenido"></div>
-
-        <div class="fondo">
-          <input
-            type="text"
-            id="mensaje"
-            placeholder="Mensaje"
-            class="text-success"
-            required/>
-          <button class="btn btn-success" id="enviar">Enviar</button>
-        </div>
-
+        <button class="btn btn-success" id="enviar">Enviar</button>
       </div>
     </div>
-
-    <!-- Button trigger modal -->
-  <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Nombre
-  </button>-->
-
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
     <script src="js/socket.io.js"></script>
     <script src="js/logica.js" charset="utf-8"></script>
