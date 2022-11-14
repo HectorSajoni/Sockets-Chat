@@ -56,11 +56,15 @@ input
     border: 0;
     padding: 0;
     padding-left: 20px;
+    margin-bottom: 0;
 }
 strong
 {
+    padding: 0;
+    display: block;
     font-size: medium;
     margin: 0;
+    margin-bottom: 0;
 }
 .mensajes
 {
@@ -72,6 +76,7 @@ strong
     margin-bottom: 5px;
     background-color:aliceblue;
     margin-right: 25px;
+    margin-top: 0;
     padding-bottom: 5px;
     line-height: 22px;
     font-size: medium;
