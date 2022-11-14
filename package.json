@@ -6,6 +6,7 @@
   "dependencies": {
     "express": "^4.15.2",
     "install": "^0.8.8",
+    "nodemon": "^2.0.20",
     "socket.io": "^1.7.2"
   },
   "scripts": {

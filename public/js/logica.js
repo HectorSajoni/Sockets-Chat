@@ -10,19 +10,25 @@ var clientes = [];
 
 botonEnviar.addEventListener('click', function () 
 {
-  var data = 
+  if(validar(usuario, mensaje))
   {
-    mensaje: mensaje.value,
-    usuario: usuario.value,
-  };
+    var data = 
+    {
+      mensaje: mensaje.value,
+      usuario: usuario.value,
+    };
 
-  if (mensaje.value === '' || usuario.value === '') 
+    if (mensaje.value === '' || usuario.value === '') 
+    {
+      alert('Se requiere un mensaje y un usuario para poder ingresar al chat');
+    } else 
+    {
+      mensaje.value = '';
+      socket.emit('chat:mensaje', data);
+    }
+  }else
   {
-    alert('Se requiere un mensaje y un usuario para poder ingresar al chat');
-  } else 
-  {
-    mensaje.value = '';
-    socket.emit('chat:mensaje', data);
+    alert("usuario o mensaje no válido")
   }
 });
 
@@ -44,3 +50,27 @@ socket.on('socket_conectado', function (data) {
   console.log("Socket conectado")
   console.log(data);
 });
+
+function validar(usuario, mensaje)
+{
+  user = usuario.value.split('')
+  message = mensaje.value.split('')
+
+  for(var i = 0; i<user.length; i++)
+  {
+    console.log("validando esto")
+    if(user[i] == '<' || user[i] == '>'){
+      console.log("falso")
+      return false
+    }
+  }
+  for(var i = 0; i<message.length; i++)
+  {
+    console.log("validando esto")
+    if(message[i] == '<' || message[i] == '>'){
+      console.log("falso")
+      return false
+    }
+  }
+  return true
+}
