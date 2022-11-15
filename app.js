@@ -22,6 +22,11 @@ app.get('/', function (req, res)
   res.sendFile(__dirname + '/public/inicio.html');
 });
 
+app.get('/chat', function (req, res) 
+{
+  res.sendFile(__dirname + '/public/inicio.html');
+});
+
 app.post('/chat', (req, res)=>
 {
   usuario = req.body.nombreDeUsuario
