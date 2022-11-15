@@ -7,11 +7,11 @@ html
 body
 {
     height: 100%;
-    padding-top: 10px;
-    padding-left: 10%;
-    padding-right: 10%;
-    background-color: rgb(55, 235, 55);
-    color: rgb(0, 60, 0);
+    padding-top: 30px;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #023047;
+    color: rgb(255, 255, 255);
 }
 #mensaje
 {
@@ -27,7 +27,7 @@ body
 .card
 {
     height: 80%;
-    background-color: rgb(130, 255, 130);
+    background-color: #219EBC;
     border-width: 0;
     border-left-width: 2px;
     border-right-width: 2px;
@@ -80,6 +80,7 @@ strong
     padding-bottom: 5px;
     line-height: 22px;
     font-size: medium;
+    color: black;
 }
 .main
 {

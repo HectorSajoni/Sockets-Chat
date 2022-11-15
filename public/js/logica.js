@@ -3,7 +3,6 @@ var socket = io();
 let mensaje = document.getElementById('mensaje');
 let usuario = document.getElementById('usuario');
 let mensajes = document.getElementById('mensajes');
-let notificaciones = document.getElementById('notificaciones');
 let botonEnviar = document.getElementById('enviar');
 
 var clientes = [];
@@ -38,7 +37,6 @@ socket.on('chat:mensaje', function (data) {
       <strong>`+data.usuario+`</strong>
       <div class="mensajes">`+data.mensaje+`</div>
     </div>`;
-  notificaciones.innerHTML = '';
 });
 
 socket.on('socket_desconectado', function (data) {
@@ -77,3 +75,8 @@ function validar(usuario, mensaje)
   }
   return true
 }
+
+
+
+
+
